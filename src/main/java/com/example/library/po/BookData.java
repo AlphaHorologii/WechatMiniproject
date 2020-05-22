@@ -1,4 +1,4 @@
-package po;
+package com.example.library.po;
 
 import com.example.library.enums.Rating;
 
