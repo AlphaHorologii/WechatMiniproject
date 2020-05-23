@@ -1,6 +1,7 @@
 package com.example.library.controller;
 
-import com.example.library.service.AuthorDisplayService;
+import com.example.library.bl.AuthorDisplayService;
+import com.example.library.po.Author;
 import com.example.library.vo.ResponseVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,8 +15,8 @@ public class AuthorController {
     @Autowired
     AuthorDisplayService service;
 
-    @GetMapping("/{authorID}")
-    public ResponseVO showAuthor(@PathVariable String authorID){
+    @GetMapping("/{authorID}/info")
+    public Author showAuthor(@PathVariable String authorID){
         return service.getAuthorByID(Integer.parseInt(authorID));
     }
 }

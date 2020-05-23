@@ -1,6 +1,6 @@
 package com.example.library.controller;
 
-import com.example.library.service.BooksDisplayService;
+import com.example.library.bl.BooksDisplayService;
 import com.example.library.vo.ResponseVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
