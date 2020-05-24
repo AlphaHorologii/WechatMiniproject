@@ -1,8 +1,13 @@
 package com.example.library.bl;
 
+import com.example.library.po.Book;
 import com.example.library.vo.ResponseVO;
 
+import java.util.List;
+
 public interface BooksDisplayService {
-    ResponseVO getBookByID(int bookID);
-    ResponseVO getBooksByType(int typeID);
+    Book getBookByID(Integer bookID);
+//    ResponseVO getBooksByType(int typeID);
+    List<Book> getAllBooks();
+    List<Book> getBooksByAuthorId(Integer authorid);
 }
