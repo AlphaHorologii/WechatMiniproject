@@ -6,7 +6,10 @@ import java.net.URL;
 
 public class Book {
     private Integer bookid;
+    private Integer categoryId;
     private Integer author_id;
+    //靠忘了author name这茬
+    private String authorName;
     private String image;
     private String summary;
     private String publisher;
@@ -14,6 +17,19 @@ public class Book {
     private double rating;
     private String pubdate;
     private String catalog;
+    public String getAuthorName() {
+        return authorName;
+    }
+
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+    public Integer getCategoryId() {
+        return categoryId;
+    }
+    public void setCategoryId(Integer categoryId) {
+        this.categoryId = categoryId;
+    }
     public Integer getBookid() {
         return bookid;
     }

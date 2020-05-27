@@ -11,6 +11,9 @@
     <select id="selectBooksByAuthorId" resultMap="book">
         select * from book where author_id=#{authorId}
     </select>
+    <select id="selectBooksBycategoryId" resultMap="book">
+        select * from book where categoryId=#{categoryId}
+    </select>
     <select id="selectAllBooks" resultMap="book">
         select * from book
     </select>
@@ -22,10 +25,14 @@
         select * from book where bookid=#{bookid}
     </select>
 
+    <select id="getBookNumsByCategoryId" resultType="Integer">
+          select count(*) from book where categoryid=#{categoryId}
+    </select>
 
     <resultMap id="book" type="com.example.library.po.Book">
         <id column="bookid" property="bookid"></id>
         <result column="author_id" property="author_id"></result>
+        <result column="categoryId" property="categoryId"></result>
         <result column="image" property="image"></result>
         <result column="summary" property="summary"></result>
         <result column="publisher" property="publisher"></result>

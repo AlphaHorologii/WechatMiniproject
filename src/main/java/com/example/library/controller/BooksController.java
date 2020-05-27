@@ -22,15 +22,20 @@ public class BooksController {
 //        return service.getBooksByType(Integer.parseInt(typeID));
 //    }
     @GetMapping("/all")
-    public List<Book> getAllBooks(){
-        return service.getAllBooks();
+    public ResponseVO getAllBooks(){
+        return ResponseVO.buildSuccess( service.getAllBooks());
     }
     @GetMapping("/{bookId}/detail")
-    public Book getBookByID(@PathVariable String bookId){
-        return service.getBookByID(Integer.parseInt(bookId));
+    public ResponseVO getBookByID(@PathVariable String bookId){
+        return ResponseVO.buildSuccess( service.getBookByID(Integer.parseInt(bookId)));
     }
-    @GetMapping("/{authorId}/allbooks")
-    public List<Book> getBooksByAuthorId(@PathVariable String authorId){
-        return service.getBooksByAuthorId(Integer.parseInt(authorId));
+
+//    public ResponseVO getBooksByAuthorId(@PathVariable String authorId){
+//        return ResponseVO.buildSuccess(service.getBooksByAuthorId(Integer.parseInt(authorId)));
+//    }
+
+    @GetMapping("/categorybooks/{categoryId}")
+    public ResponseVO getBooksBycategoryId(@PathVariable String categoryId){
+        return ResponseVO.buildSuccess( service.getBooksBycategoryId(Integer.parseInt(categoryId)));
     }
 }

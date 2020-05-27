@@ -17,6 +17,7 @@ public interface BookMapper {
     //根据bookid返回书籍信息
     Book getBookById(@Param("bookid") Integer bookid );
 
-    //TODO 根据分类返回书籍信息//目前还没有分类等。。搁置
+    Integer getBookNumsByCategoryId(@Param("categoryId") Integer categoryId);
 
+    List<Book> selectBooksBycategoryId(@Param("categoryId") Integer categoryId);
 }

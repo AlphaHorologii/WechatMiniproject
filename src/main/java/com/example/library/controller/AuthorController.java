@@ -3,6 +3,7 @@ package com.example.library.controller;
 import com.example.library.bl.AuthorDisplayService;
 import com.example.library.po.Author;
 import com.example.library.vo.ResponseVO;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +17,11 @@ public class AuthorController {
     AuthorDisplayService service;
 
     @GetMapping("/{authorID}/info")
-    public Author showAuthor(@PathVariable String authorID){
-        return service.getAuthorByID(Integer.parseInt(authorID));
+    public ResponseVO showAuthor(@PathVariable String authorID){
+        return ResponseVO.buildSuccess(service.getAuthorByID(Integer.parseInt(authorID)));
+    }
+    @GetMapping("/name/{id}")
+    public ResponseVO getAuthornameById(@PathVariable("id") String id){
+        return ResponseVO.buildSuccess(service.getAuthornameById(Integer.parseInt(id)));
     }
 }
