@@ -1,4 +1,4 @@
-create table author
+CREATE TABLE author
 (
     authorid  int auto_increment
         primary key,
@@ -12,7 +12,8 @@ create table author
 INSERT INTO library.author (authorid, name, country, intro, totalBook, image, categoryid) VALUES (1, '天蚕土豆', 'china', '喜欢拖更，烂尾和瞎弄', 4, 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png', 1);
 INSERT INTO library.author (authorid, name, country, intro, totalBook, image, categoryid) VALUES (2, '唐家三少', 'china', '功成名就，有钱了，可惜亡妻', 3, 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png', 1);
 INSERT INTO library.author (authorid, name, country, intro, totalBook, image, categoryid) VALUES (3, '陈振宇', 'china？', '著名教授，旧日支配者，scp-87,恐怖男人', 2, 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png', 2);
-create table book
+
+CREATE TABLE book
 (
     bookid     int auto_increment
         primary key,
@@ -30,7 +31,8 @@ create table book
 INSERT INTO library.book (bookid, author_id, categoryId, image, summary, publisher, title, rating, pubdate, catalog) VALUES (1, 3, 2, 'https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png', '著名教授，师兄杀手，倾心巨作，可能没人能看懂', '南京大学出版社', '数据科学基础', 9.99, '2020-5-17', '没人知道');
 INSERT INTO library.book (bookid, author_id, categoryId, image, summary, publisher, title, rating, pubdate, catalog) VALUES (2, 2, 1, 'https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png', '斗罗大陆，很强，可以让作者吃老本吃到死', '随便一个出版社', '斗罗大陆', 6, '2020-5-17', '太长了');
 INSERT INTO library.book (bookid, author_id, categoryId, image, summary, publisher, title, rating, pubdate, catalog) VALUES (3, 2, 1, 'https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png', '斗罗大陆2', '随意出版社', '斗罗大陆2', 6.6, '2020-5-17', '太长了');
-create table category
+
+CREATE TABLE category
 (
     id           int                        not null
         primary key,
