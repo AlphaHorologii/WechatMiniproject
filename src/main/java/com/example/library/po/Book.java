@@ -1,9 +1,5 @@
 package com.example.library.po;
 
-import com.example.library.enums.Rating;
-
-import java.net.URL;
-
 public class Book {
     private Integer bookid;
     private Integer categoryId;
@@ -101,6 +97,4 @@ public class Book {
     public void setCatalog(String catalog) {
         this.catalog = catalog;
     }
-
-
 }

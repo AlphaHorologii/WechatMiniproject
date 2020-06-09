@@ -19,6 +19,7 @@ public class BooksDisplayServiceImpl implements BooksDisplayService {
     BookMapper bookMapper;
     @Autowired
     AuthorMapper authorMapper;
+
     @Override
     public Book getBookByID(Integer bookID) {
         Book book= bookMapper.getBookById(bookID);
@@ -43,13 +44,13 @@ public class BooksDisplayServiceImpl implements BooksDisplayService {
 //    }
 
     @Override
-    public List<CategoryBookVO> getBooksBycategoryId(Integer categoryId) {
+    public List<CategoryBookVO> getBooksByCategoryId(Integer categoryId) {
      List<Book> books=bookMapper.selectBooksBycategoryId(categoryId);
         for(Book b:books){
             String authorname=authorMapper.getAuthornameById(b.getAuthor_id());
             b.setAuthorName(authorname);
         }
-     List<CategoryBookVO> catbooks=books.stream().map(r -> {
+     List<CategoryBookVO> catbooks = books.stream().map(r -> {
          CategoryBookVO bookVO = new CategoryBookVO();
          bookVO.setAuthor_id(r.getAuthor_id());
          bookVO.setAuthorName(r.getAuthorName());
@@ -62,7 +63,5 @@ public class BooksDisplayServiceImpl implements BooksDisplayService {
      }).collect(Collectors.toList());
      return catbooks;
     }
-
-//    @Override
 
 }

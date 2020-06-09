@@ -17,6 +17,7 @@ public class CategoryServiceImpl implements CategoryService {
     AuthorMapper authorMapper;
     @Autowired
     BookMapper bookMapper;
+
     @Override
     public List<CategoryVO> getAllCategory() {
         List<CategoryVO> categoryVOS=categoryMapper.getAllCategory();
@@ -24,9 +25,9 @@ public class CategoryServiceImpl implements CategoryService {
             Integer id=categoryVO.getId();
             Integer nums= bookMapper.getBookNumsByCategoryId(id);
             categoryVO.setBooknums(nums);
-            //todo 根据id在books寻找这类书的总数 ：：方法一律加在mapper里即可
-            List<String> famous_authers=authorMapper.getAuthornameByCategoryid(id);
-            categoryVO.setFamous_authers(famous_authers);
+            //todo 根据id在books寻找这类书的总数 方法一律加在mapper里即可
+            List<String> famous_authors=authorMapper.getAuthornameByCategoryid(id);
+            categoryVO.setFamous_authors(famous_authors);
         }
         return categoryVOS;
     }

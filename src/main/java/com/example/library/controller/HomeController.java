@@ -15,7 +15,6 @@ public class HomeController {
     CategoryService service;
     @GetMapping("/allCategory")
     public ResponseVO getAllCategory(){
-        return ResponseVO.buildSuccess( service.getAllCategory());
+        return ResponseVO.buildSuccess(service.getAllCategory());
     }
-
 }

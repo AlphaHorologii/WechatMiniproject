@@ -6,7 +6,6 @@ public class CategoryBookVO {
     private String title;
     private double rating;
     private Integer author_id;
-    //靠忘了author name这茬
     private String authorName;
     private String pubdate;
 

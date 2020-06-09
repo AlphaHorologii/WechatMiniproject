@@ -28,5 +28,4 @@
         <result column="heat" property="heat"></result>
     </resultMap>
 
-
 </mapper>

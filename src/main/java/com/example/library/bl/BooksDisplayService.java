@@ -8,8 +8,10 @@ import java.util.List;
 
 public interface BooksDisplayService {
     Book getBookByID(Integer bookID);
-//    ResponseVO getBooksByType(int typeID);
+
     List<Book> getAllBooks();
-//    List<Book> getBooksByAuthorId(Integer authorid);
-    List<CategoryBookVO> getBooksBycategoryId(Integer categoryId);
+
+//  List<Book> getBooksByAuthorId(Integer authorid);
+
+    List<CategoryBookVO> getBooksByCategoryId(Integer categoryId);
 }

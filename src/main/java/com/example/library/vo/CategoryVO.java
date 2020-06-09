@@ -10,8 +10,9 @@ public class CategoryVO {
     private String motto;
     private Integer heat;
     //上面是数据库有的
+
     private Integer booknums;
-    private List<String>famous_authers;
+    private List<String> famous_authors;
 
     public Integer getId() {
         return id;
@@ -61,12 +62,12 @@ public class CategoryVO {
         this.booknums = booknums;
     }
 
-    public List<String> getFamous_authers() {
-        return famous_authers;
+    public List<String> getFamous_authors() {
+        return famous_authors;
     }
 
-    public void setFamous_authers(List<String> famous_authers) {
-        this.famous_authers = famous_authers;
+    public void setFamous_authors(List<String> famous_authors) {
+        this.famous_authors = famous_authors;
     }
 
 }
