@@ -17,10 +17,10 @@ public class BooksController {
     @Autowired
     BooksDisplayService service;
 
-//    @GetMapping("/{typeID}")
-//    public ResponseVO showBooks(@PathVariable String typeID){
-//        return service.getBooksByType(Integer.parseInt(typeID));
-//    }
+//  @GetMapping("/{typeID}")
+//  public ResponseVO showBooks(@PathVariable String typeID){
+//      return service.getBooksByType(Integer.parseInt(typeID));
+//  }
 
     @GetMapping("/all")
     public ResponseVO getAllBooks(){
@@ -32,12 +32,12 @@ public class BooksController {
         return ResponseVO.buildSuccess( service.getBookByID(Integer.parseInt(bookId)));
     }
 
-//    public ResponseVO getBooksByAuthorId(@PathVariable String authorId){
-//        return ResponseVO.buildSuccess(service.getBooksByAuthorId(Integer.parseInt(authorId)));
-//    }
+//  public ResponseVO getBooksByAuthorId(@PathVariable String authorId){
+//      return ResponseVO.buildSuccess(service.getBooksByAuthorId(Integer.parseInt(authorId)));
+//  }
 
-    @GetMapping("/categorybooks/{categoryId}")
-    public ResponseVO getBooksBycategoryId(@PathVariable String categoryId){
+    @GetMapping("/bookCategory/{categoryId}")
+    public ResponseVO getBooksByCategoryId(@PathVariable String categoryId){
         return ResponseVO.buildSuccess(service.getBooksByCategoryId(Integer.parseInt(categoryId)));
     }
 }
