@@ -1,6 +1,6 @@
-package com.example.library.bllmpl;
+package com.example.library.servicelmpl;
 
-import com.example.library.bl.CategoryService;
+import com.example.library.service.CategoryService;
 import com.example.library.data.author.AuthorMapper;
 import com.example.library.data.book.BookMapper;
 import com.example.library.data.category.CategoryMapper;

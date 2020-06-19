@@ -1,8 +1,7 @@
-package com.example.library.bl;
+package com.example.library.service;
 
 import com.example.library.po.Book;
 import com.example.library.vo.CategoryBookVO;
-import com.example.library.vo.ResponseVO;
 
 import java.util.List;
 

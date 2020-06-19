@@ -1,9 +1,7 @@
 package com.example.library.controller;
 
-import com.example.library.bl.AuthorDisplayService;
-import com.example.library.po.Author;
+import com.example.library.service.AuthorDisplayService;
 import com.example.library.vo.ResponseVO;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

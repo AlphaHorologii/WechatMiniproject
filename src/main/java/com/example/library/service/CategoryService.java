@@ -1,4 +1,4 @@
-package com.example.library.bl;
+package com.example.library.service;
 
 import com.example.library.vo.CategoryVO;
 

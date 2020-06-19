@@ -1,8 +1,6 @@
-package com.example.library.bl;
+package com.example.library.service;
 
-import com.example.library.po.Author;
 import com.example.library.vo.AuthorVO;
-import com.example.library.vo.ResponseVO;
 
 public interface AuthorDisplayService {
     AuthorVO getAuthorByID(int authorID);

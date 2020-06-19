@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface AuthorMapper {
     AuthorVO getAuthorById(@Param("id") int id);
-//    Author getAuthorByName(@Param("name") String name);
+//  Author getAuthorByName(@Param("name") String name);
     String getAuthornameById(@Param("id") int id);
     List<String> getAuthornameByCategoryid(@Param("id") int id);
 }
