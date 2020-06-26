@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.library.data.library.AuthorMapper">
+    <select id="getAllAuthors" resultMap="author">
+        SELECT * FROM author
+    </select>
+
+    <select id="getAuthorsNameByCategoryID" resultType="String">
+        SELECT name FROM author WHERE categoryID=#{categoryID}
+    </select>
+
+    <select id="getNameByID" resultType="String">
+        SELECT name FROM author WHERE authorID=#{authorID}
+    </select>
+
+    <select id="getAuthorsByCategoryID" resultMap="author">
+        SELECT * FROM author WHERE categoryID=#{categoryID}
+    </select>
+
+    <select id="getAuthorByID" resultMap="author">
+        SELECT * FROM author WHERE authorID=#{authorID}
+    </select>
+
+    <select id="searchAuthorByKeyword" resultMap="author">
+        SELECT * FROM author WHERE name LIKE #{keyword}
+    </select>
+
+    <resultMap id="author" type="com.example.library.po.Author">
+        <id column="authorID" property="authorID"/>
+        <result column="image" property="image"/>
+        <result column="name" property="name"/>
+        <result column="country" property="country"/>
+        <result column="introduction" property="introduction"/>
+        <result column="bookCount" property="bookCount"/>
+        <result column="categoryID" property="categoryID"/>
+    </resultMap>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.library.data.user.UserFavoriteMapper">
+    <select id="isUserFavorite" resultType="Integer">
+        SELECT COUNT(*) FROM userFavorite WHERE userID = #{userID} AND bookID = #{bookID}
+    </select>
+
+    <insert id="addFavorite">
+        INSERT INTO userFavorite (userID, bookID) VALUES (#{userID}, #{bookID})
+    </insert>
+
+    <delete id="removeFavorite">
+        DELETE FROM userFavorite WHERE userID = #{userID} AND bookID = #{bookID}
+    </delete>
+
+    <select id="getAllFavorite" resultType="Integer">
+        SELECT bookID FROM userFavorite WHERE userID = #{userID}
+    </select>
+
+    <resultMap id="userFavorite" type="com.example.library.po.UserFavorite">
+        <result column="userID" property="userID"/>
+        <result column="bookID" property="bookID"/>
+    </resultMap>
+</mapper>

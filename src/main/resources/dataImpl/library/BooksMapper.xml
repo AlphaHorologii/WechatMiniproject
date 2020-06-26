@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.library.data.library.BooksMapper">
+    <select id="getAllBooks" resultMap="book">
+        SELECT * FROM book
+    </select>
+
+    <select id="getBooksCountByCategoryID" resultType="Integer">
+        SELECT COUNT(*) FROM book WHERE categoryID=#{categoryID}
+    </select>
+
+    <select id="getBookByID" resultMap="book">
+        SELECT * FROM book WHERE bookID=#{bookID}
+    </select>
+
+    <select id="getBooksByCategoryID" resultMap="book">
+        SELECT * FROM book WHERE categoryID=#{categoryID}
+    </select>
+
+    <select id="getBooksByAuthorID" resultMap="book">
+        SELECT * FROM book WHERE authorID=#{authorID}
+    </select>
+    
+    <select id="searchBooksByKeyword" resultMap="book">
+        SELECT * FROM book WHERE title LIKE #{keyword}
+    </select>
+
+    <resultMap id="book" type="com.example.library.po.Book">
+        <id column="bookID" property="bookID"/>
+        <result column="categoryID" property="categoryID"/>
+        <result column="authorID" property="authorID"/>
+        <result column="image" property="image"/>
+        <result column="summary" property="summary"/>
+        <result column="publisher" property="publisher"/>
+        <result column="title" property="title"/>
+        <result column="rating" property="rating"/>
+        <result column="publishDate" property="publishDate"/>
+        <result column="catalog" property="catalog"/>
+    </resultMap>
+</mapper>

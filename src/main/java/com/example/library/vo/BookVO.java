@@ -1,9 +1,11 @@
-package com.example.library.po;
+package com.example.library.vo;
 
-public class Book {
+public class BookVO {
     private Integer bookID;
     private Integer categoryID;
+    private String categoryName;
     private Integer authorID;
+    private String authorName;
     private String image;
     private String summary;
     private String publisher;
@@ -28,6 +30,14 @@ public class Book {
         this.categoryID = categoryID;
     }
 
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
     public Integer getAuthorID() {
         return authorID;
     }
@@ -36,12 +46,12 @@ public class Book {
         this.authorID = authorID;
     }
 
-    public double getRating() {
-        return rating;
+    public String getAuthorName() {
+        return authorName;
     }
 
-    public void setRating(double rating) {
-        this.rating = rating;
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
     }
 
     public String getImage() {
@@ -74,6 +84,14 @@ public class Book {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public double getRating() {
+        return rating;
+    }
+
+    public void setRating(double rating) {
+        this.rating = rating;
     }
 
     public String getPublishDate() {
