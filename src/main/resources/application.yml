@@ -1,9 +1,11 @@
 spring:
   datasource:
-    url: jdbc:sqlite:./resources/library.sqlite
+    url: jdbc:sqlite:./resources/Library.sqlite
     driver-class-name: org.sqlite.JDBC
 
 mybatis:
   mapper-locations: classpath:dataImpl/*/*Mapper.xml
   configuration:
     map-underscore-to-camel-case: true
+server:
+  max-http-header-size: 102400

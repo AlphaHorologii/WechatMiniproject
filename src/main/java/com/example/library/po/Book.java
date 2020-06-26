@@ -1,47 +1,45 @@
 package com.example.library.po;
 
 public class Book {
-    private Integer bookID;
-    private Integer categoryID;
-    private Integer authorID;
+    private Integer bookid;
+    private Integer categoryId;
+    private Integer author_id;
+    //靠忘了author name这茬
+    private String authorName;
     private String image;
     private String summary;
     private String publisher;
     private String title;
     private double rating;
-    private String publishDate;
+    private String pubdate;
     private String catalog;
-
-    public Integer getBookID() {
-        return bookID;
+    public String getAuthorName() {
+        return authorName;
     }
 
-    public void setBookID(Integer bookID) {
-        this.bookID = bookID;
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+    public Integer getCategoryId() {
+        return categoryId;
+    }
+    public void setCategoryId(Integer categoryId) {
+        this.categoryId = categoryId;
+    }
+    public Integer getBookid() {
+        return bookid;
     }
 
-    public Integer getCategoryID() {
-        return categoryID;
+    public void setBookid(Integer bookid) {
+        this.bookid = bookid;
     }
 
-    public void setCategoryID(Integer categoryID) {
-        this.categoryID = categoryID;
+    public Integer getAuthor_id() {
+        return author_id;
     }
 
-    public Integer getAuthorID() {
-        return authorID;
-    }
-
-    public void setAuthorID(Integer authorID) {
-        this.authorID = authorID;
-    }
-
-    public double getRating() {
-        return rating;
-    }
-
-    public void setRating(double rating) {
-        this.rating = rating;
+    public void setAuthor_id(Integer author_id) {
+        this.author_id = author_id;
     }
 
     public String getImage() {
@@ -76,12 +74,20 @@ public class Book {
         this.title = title;
     }
 
-    public String getPublishDate() {
-        return publishDate;
+    public double getRating() {
+        return rating;
     }
 
-    public void setPublishDate(String publishDate) {
-        this.publishDate = publishDate;
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
+
+    public String getPubdate() {
+        return pubdate;
+    }
+
+    public void setPubdate(String pubdate) {
+        this.pubdate = pubdate;
     }
 
     public String getCatalog() {

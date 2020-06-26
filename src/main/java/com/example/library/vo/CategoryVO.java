@@ -1,23 +1,25 @@
 package com.example.library.vo;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class CategoryVO {
-    private Integer categoryID;
+
+    private Integer id;
     private String categoryName;
     private String image;
-    private String introduction;
+    private String motto;
     private Integer heat;
+    //上面是数据库有的
 
-    private Integer booksCount;
-    private ArrayList<String> famousAuthors;
+    private Integer booknums;
+    private List<String> famous_authors;
 
-    public Integer getCategoryID() {
-        return categoryID;
+    public Integer getId() {
+        return id;
     }
 
-    public void setCategoryID(Integer categoryID) {
-        this.categoryID = categoryID;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getCategoryName() {
@@ -36,12 +38,12 @@ public class CategoryVO {
         this.image = image;
     }
 
-    public String getIntroduction() {
-        return introduction;
+    public String getMotto() {
+        return motto;
     }
 
-    public void setIntroduction(String introduction) {
-        this.introduction = introduction;
+    public void setMotto(String motto) {
+        this.motto = motto;
     }
 
     public Integer getHeat() {
@@ -52,19 +54,20 @@ public class CategoryVO {
         this.heat = heat;
     }
 
-    public Integer getBooksCount() {
-        return booksCount;
+    public Integer getBooknums() {
+        return booknums;
     }
 
-    public void setBooksCount(Integer booksCount) {
-        this.booksCount = booksCount;
+    public void setBooknums(Integer booknums) {
+        this.booknums = booknums;
     }
 
-    public ArrayList<String> getFamousAuthors() {
-        return famousAuthors;
+    public List<String> getFamous_authors() {
+        return famous_authors;
     }
 
-    public void setFamousAuthors(ArrayList<String> famousAuthors) {
-        this.famousAuthors = famousAuthors;
+    public void setFamous_authors(List<String> famous_authors) {
+        this.famous_authors = famous_authors;
     }
+
 }

@@ -1,28 +1,35 @@
 package com.example.library.po;
 
+import java.net.URL;
+import java.util.List;
+
 public class Author {
-    private Integer authorID;
+    private Integer authorid;
     private String image;
     private String name;
     private String country;
-    private String introduction;
-    private Integer bookCount;
-    private Integer categoryID;
-
-    public Integer getAuthorID() {
-        return authorID;
+    private String intro;
+    private Integer totalBook;
+    private Integer categoryid;
+    public Integer getCategoryid() {
+        return categoryid;
     }
-
-    public void setAuthorID(Integer authorID) {
-        this.authorID = authorID;
+    public void setCategoryid(Integer categoryid) {
+        this.categoryid = categoryid;
     }
-
     public String getImage() {
         return image;
     }
 
     public void setImage(String image) {
         this.image = image;
+    }
+    public Integer getAuthorid() {
+        return authorid;
+    }
+
+    public void setAuthorid(Integer authorid) {
+        this.authorid = authorid;
     }
 
     public String getName() {
@@ -41,27 +48,19 @@ public class Author {
         this.country = country;
     }
 
-    public String getIntroduction() {
-        return introduction;
+    public String getIntro() {
+        return intro;
     }
 
-    public void setIntroduction(String introduction) {
-        this.introduction = introduction;
+    public void setIntro(String intro) {
+        this.intro = intro;
     }
 
-    public Integer getBookCount() {
-        return bookCount;
+    public Integer getTotalBook() {
+        return totalBook;
     }
 
-    public void setBookCount(Integer bookCount) {
-        this.bookCount = bookCount;
-    }
-
-    public Integer getCategoryID() {
-        return categoryID;
-    }
-
-    public void setCategoryID(Integer categoryID) {
-        this.categoryID = categoryID;
+    public void setTotalBook(Integer totalBook) {
+        this.totalBook = totalBook;
     }
 }

@@ -1,24 +1,25 @@
 package com.example.library.vo;
 
-import java.util.ArrayList;
+import com.example.library.po.Book;
+
+import java.util.List;
 
 public class AuthorVO {
-    private Integer authorID;
+    private Integer authorid;
     private String image;
     private String name;
     private String country;
-    private String introduction;
-    private String categoryName;
-    private Integer bookCount;
+    private String intro;
+    private Integer totalBook;
+    private Integer categoryid;
+    private List<Book> books;
 
-    private ArrayList<BookVO> books;
-
-    public Integer getAuthorID() {
-        return authorID;
+    public Integer getAuthorid() {
+        return authorid;
     }
 
-    public void setAuthorID(Integer authorID) {
-        this.authorID = authorID;
+    public void setAuthorid(Integer authorid) {
+        this.authorid = authorid;
     }
 
     public String getImage() {
@@ -45,35 +46,36 @@ public class AuthorVO {
         this.country = country;
     }
 
-    public String getIntroduction() {
-        return introduction;
+    public String getIntro() {
+        return intro;
     }
 
-    public void setIntroduction(String introduction) {
-        this.introduction = introduction;
+    public void setIntro(String intro) {
+        this.intro = intro;
     }
 
-    public String getCategoryName() {
-        return categoryName;
+    public Integer getTotalBook() {
+        return totalBook;
     }
 
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
+    public void setTotalBook(Integer totalBook) {
+        this.totalBook = totalBook;
     }
 
-    public ArrayList<BookVO> getBooks() {
+    public List<Book> getBooks() {
         return books;
     }
 
-    public void setBooks(ArrayList<BookVO> books) {
+    public void setBooks(List<Book> books) {
         this.books = books;
     }
-
-    public Integer getBookCount() {
-        return bookCount;
+    public Integer getCategoryid() {
+        return categoryid;
     }
 
-    public void setBookCount(Integer bookCount) {
-        this.bookCount = bookCount;
+    public void setCategoryid(Integer categoryid) {
+        this.categoryid = categoryid;
     }
+
+
 }
