@@ -1,16 +1,11 @@
-package com.example.library.vo;
+package com.example.library.po;
 
-import java.util.ArrayList;
-
-public class CategoryVO {
+public class Category {
     private Integer categoryID;
     private String categoryName;
     private String image;
     private String introduction;
     private Integer heat;
-
-    private Integer booksCount;
-    private ArrayList<String> famousAuthors;
 
     public Integer getCategoryID() {
         return categoryID;
@@ -50,21 +45,5 @@ public class CategoryVO {
 
     public void setHeat(Integer heat) {
         this.heat = heat;
-    }
-
-    public Integer getBooksCount() {
-        return booksCount;
-    }
-
-    public void setBooksCount(Integer booksCount) {
-        this.booksCount = booksCount;
-    }
-
-    public ArrayList<String> getFamousAuthors() {
-        return famousAuthors;
-    }
-
-    public void setFamousAuthors(ArrayList<String> famousAuthors) {
-        this.famousAuthors = famousAuthors;
     }
 }

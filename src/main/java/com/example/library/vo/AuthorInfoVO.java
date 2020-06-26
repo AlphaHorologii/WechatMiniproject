@@ -1,25 +1,11 @@
 package com.example.library.vo;
 
-import java.util.ArrayList;
-
-public class AuthorVO {
-    private Integer authorID;
+public class AuthorInfoVO {
     private String image;
     private String name;
     private String country;
     private String introduction;
     private String categoryName;
-    private Integer bookCount;
-
-    private ArrayList<BookVO> books;
-
-    public Integer getAuthorID() {
-        return authorID;
-    }
-
-    public void setAuthorID(Integer authorID) {
-        this.authorID = authorID;
-    }
 
     public String getImage() {
         return image;
@@ -59,21 +45,5 @@ public class AuthorVO {
 
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
-    }
-
-    public ArrayList<BookVO> getBooks() {
-        return books;
-    }
-
-    public void setBooks(ArrayList<BookVO> books) {
-        this.books = books;
-    }
-
-    public Integer getBookCount() {
-        return bookCount;
-    }
-
-    public void setBookCount(Integer bookCount) {
-        this.bookCount = bookCount;
     }
 }

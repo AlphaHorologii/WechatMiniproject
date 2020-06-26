@@ -18,6 +18,12 @@ public class ResponseVO {
         return response;
     }
 
+    public static ResponseVO buildFailure(){
+        ResponseVO response=new ResponseVO();
+        response.setStatus(false);
+        return response;
+    }
+
     public static ResponseVO buildFailure(String message){
         ResponseVO response=new ResponseVO();
         response.setStatus(false);
@@ -50,4 +56,3 @@ public class ResponseVO {
         this.content = content;
     }
 }
-

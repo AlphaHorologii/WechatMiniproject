@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
     @Autowired
     CategoryService service;
+
     @GetMapping("/allCategory")
     public ResponseVO getAllCategory(){
         return ResponseVO.buildSuccess(service.getAllCategory());
