@@ -20,5 +20,5 @@ public interface BooksService {
 
     ResponseVO updateBook(Integer bookID, BookVO bookVO);
 
-    ResponseVO isUserFavorite(Integer userID, Integer bookID);
+    Boolean isUserFavorite(Integer userID, Integer bookID);
 }

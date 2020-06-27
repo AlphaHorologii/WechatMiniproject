@@ -87,8 +87,8 @@ public class LibraryController {
 
     @GetMapping("/books/favorite={bookID}")
     public ResponseVO isUserFavorite(@PathVariable Integer bookID,
-                                     @RequestParam String userID){
-        return ResponseVO.buildSuccess(booksService.isUserFavorite(Integer.parseInt(userID.split("=")[1]), bookID));
+                                     @RequestParam Integer userID){
+        return ResponseVO.buildSuccess(booksService.isUserFavorite(userID, bookID));
     }
 
     @GetMapping("/authors")

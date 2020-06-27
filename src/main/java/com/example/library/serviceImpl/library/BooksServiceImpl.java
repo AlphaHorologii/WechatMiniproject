@@ -102,10 +102,7 @@ public class BooksServiceImpl implements BooksService {
     }
 
     @Override
-    public ResponseVO isUserFavorite(Integer userID, Integer bookID) {
-        if(userFavoriteMapper.isUserFavorite(userID, bookID) > 0){
-            return ResponseVO.buildSuccess(true);
-        }
-        return ResponseVO.buildSuccess(false);
+    public Boolean isUserFavorite(Integer userID, Integer bookID) {
+        return userFavoriteMapper.isUserFavorite(userID, bookID) > 0;
     }
 }
